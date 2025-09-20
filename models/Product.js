@@ -44,9 +44,6 @@ const productSchema = new mongoose.Schema(
       ref: "SubCategory",
       required: [true, "please provide a sub category id"],
     },
-    gender: {
-      type: String,
-    },
     tags: [String],
     sku: {
       type: String,
@@ -77,7 +74,6 @@ const productSchema = new mongoose.Schema(
         ref: "ProductReview",
       },
     ],
-
     shop: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Shop",
