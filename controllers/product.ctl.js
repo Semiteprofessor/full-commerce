@@ -1,5 +1,8 @@
 const getAdmin = require("../config/getUser")
 const slugify = require("slugify");
+const Product = require("../models/Product");
+const Shop = require("../models/Shop");
+const getBlurDataURL = require("../config/getBlurDataUrl");
 
 const createProductByAdmin = async (req, res) => {
   try {
@@ -11,7 +14,7 @@ const createProductByAdmin = async (req, res) => {
 
     const updatedImages = await Promise.all(
       images.map(async (image) => {
-        const blurDataURL = await blurDataUrl(image.url);
+        const blurDataURL = await getBlurDataURL(image.url);
         return { ...image, blurDataURL };
       })
     );

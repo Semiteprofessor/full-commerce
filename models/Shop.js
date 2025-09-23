@@ -137,3 +137,5 @@ const ShopSchema = new mongoose.Schema(
 
 const Shop = mongoose.models.Shop || mongoose.model("Shop", ShopSchema);
 module.exports = Shop;
+
+
