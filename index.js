@@ -25,8 +25,10 @@ mongoose
   });
 
 const authRoutes = require("./routes/auth.route");
+const productRoutes = require("./routes/product.route");
 
 app.use("/api", authRoutes);
+app.use("/api", productRoutes);
 
 app.get("/", (req, res) => {
   res.send("This is a GET API");

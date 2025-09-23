@@ -2,6 +2,12 @@ const express = require("express");
 const productController = require("../controllers/product.ctl");
 const router = express.Router();
 
-router.post("/product/create", productController.registerUser);
+const verifyToken = require("../config/jwt");
+
+router.post(
+  "/product/create",
+  verifyToken,
+  productController.createProductByAdmin
+);
 
 module.exports = router;
