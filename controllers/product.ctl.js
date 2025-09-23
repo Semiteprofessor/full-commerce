@@ -1,4 +1,4 @@
-const getAdmin = require("../config/getUser")
+const getAdmin = require("../config/getUser");
 const slugify = require("slugify");
 const Product = require("../models/Product");
 const Shop = require("../models/Shop");
@@ -43,3 +43,5 @@ const createProductByAdmin = async (req, res) => {
     res.status(400).json({ success: false, message: error.message });
   }
 };
+
+module.exports = createProductByAdmin;
