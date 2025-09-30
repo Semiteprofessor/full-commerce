@@ -6,4 +6,6 @@ const verifyToken = require("../config/jwt");
 
 router.post("/category/create", verifyToken, categoryController.createCategory);
 
+router.get("/category/get-all", categoryController.getAllCategories);
+
 module.exports = router;
