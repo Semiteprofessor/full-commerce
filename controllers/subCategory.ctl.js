@@ -62,4 +62,4 @@ const getAllSubCategories = async (req, res) => {
   }
 };
 
-module.exports = { createSubCategory };
+module.exports = { createSubCategory, getAllSubCategories };

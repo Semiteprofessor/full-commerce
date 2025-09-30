@@ -10,4 +10,10 @@ router.post(
   subCategoryController.createSubCategory
 );
 
+router.post(
+  "/sub-category/get-all",
+  verifyToken,
+  subCategoryController.getAllSubCategories
+);
+
 module.exports = router;
