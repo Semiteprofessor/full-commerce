@@ -1,8 +1,8 @@
 const slugify = require("slugify");
-const User = require("../models/User.model");
-const Categories = require("../models/Category.model");
-const SubCategories = require("../models/SubCategory.model");
-const { singleFileDelete } = require("../config/uploader");
+// const User = require("../models/User");
+const Categories = require("../models/Category");
+// const SubCategories = require("../models/SubCategory");
+// const { singleFileDelete } = require("../config/uploader");
 const getBlurDataURL = require("../config/getBlurDataUrl");
 
 const createCategory = async (req, res) => {
